@@ -1,7 +1,7 @@
 import unittest
-import day1_puzzle1
+import day01_puzzle01
 
-class Day1Puzzle1Test(unittest.TestCase):
+class Day01Puzzle01Test(unittest.TestCase):
     def setUp(self):
         self.given_input_calibration_lines = [
             "1abc2",
@@ -11,7 +11,7 @@ class Day1Puzzle1Test(unittest.TestCase):
         ]
 
     def test_given_example_get_calibration_values_from_calibration_lines(self):
-        self.assertEqual([day1_puzzle1.get_calibration_value_from_line(line) for line in self.given_input_calibration_lines], [12, 38, 15, 77])
+        self.assertEqual([day01_puzzle01.get_calibration_value_from_line(line) for line in self.given_input_calibration_lines], [12, 38, 15, 77])
     
     def test_given_example_get_calibration_sum_from_calibration_lines(self):
-        self.assertEqual(day1_puzzle1.get_calibration_sum_from_calibration_lines(self.given_input_calibration_lines), 142)
+        self.assertEqual(day01_puzzle01.get_calibration_sum_from_calibration_lines(self.given_input_calibration_lines), 142)

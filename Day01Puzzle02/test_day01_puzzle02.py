@@ -1,7 +1,7 @@
 import unittest
-import day1_puzzle2
+import day01_puzzle02
 
-class Day1Puzzle2Test(unittest.TestCase):
+class Day01Puzzle02Test(unittest.TestCase):
     def setUp(self):
         self.given_input_calibration_lines = [
             "two1nine",
@@ -40,7 +40,7 @@ class Day1Puzzle2Test(unittest.TestCase):
         ]
 
     def test_given_example_get_numerals_from_line(self):
-        self.assertEqual([day1_puzzle2.get_numerals_from_line(line) for line in self.given_input_calibration_lines], [
+        self.assertEqual([day01_puzzle02.get_numerals_from_line(line) for line in self.given_input_calibration_lines], [
             [2, 1, 9],
             [8, 2, 3],
             [1, 2, 3],
@@ -51,7 +51,7 @@ class Day1Puzzle2Test(unittest.TestCase):
         ])
 
     def test_given_example_get_calibration_values_from_calibration_lines(self):
-        self.assertEqual([day1_puzzle2.get_calibration_value_from_line(line) for line in self.given_input_calibration_lines], [
+        self.assertEqual([day01_puzzle02.get_calibration_value_from_line(line) for line in self.given_input_calibration_lines], [
             29,
             83,
             13,
@@ -62,10 +62,10 @@ class Day1Puzzle2Test(unittest.TestCase):
         ])
     
     def test_given_example_get_calibration_sum_from_calibration_lines(self):
-        self.assertEqual(day1_puzzle2.get_calibration_sum_from_calibration_lines(self.given_input_calibration_lines), 281)
+        self.assertEqual(day01_puzzle02.get_calibration_sum_from_calibration_lines(self.given_input_calibration_lines), 281)
 
     def test_get_numerals_from_line_overlapping(self):
-        self.assertEqual([day1_puzzle2.get_numerals_from_line(line) for line in self.overlapping_calibration_lines], [
+        self.assertEqual([day01_puzzle02.get_numerals_from_line(line) for line in self.overlapping_calibration_lines], [
             [0, 1],
             [1, 8],
             [2, 1],
@@ -80,7 +80,7 @@ class Day1Puzzle2Test(unittest.TestCase):
         ])
 
     def test_get_calibration_values_from_calibration_lines_overlapping(self):
-        self.assertEqual([day1_puzzle2.get_calibration_value_from_line(line) for line in self.overlapping_calibration_lines], [
+        self.assertEqual([day01_puzzle02.get_calibration_value_from_line(line) for line in self.overlapping_calibration_lines], [
             1,
             18,
             21,
@@ -95,7 +95,7 @@ class Day1Puzzle2Test(unittest.TestCase):
         ])
     
     def test_get_numerals_from_line_overlapping_not_start_or_end_of_line(self):
-        self.assertEqual([day1_puzzle2.get_numerals_from_line(line) for line in self.overlapping_not_start_or_end_calibration_lines], [
+        self.assertEqual([day01_puzzle02.get_numerals_from_line(line) for line in self.overlapping_not_start_or_end_calibration_lines], [
             [0, 1],
             [1, 8],
             [2, 1],
@@ -110,7 +110,7 @@ class Day1Puzzle2Test(unittest.TestCase):
         ])
     
     def test_get_calibration_values_from_calibration_lines_overlapping_not_start_or_end_of_line(self):
-        self.assertEqual([day1_puzzle2.get_calibration_value_from_line(line) for line in self.overlapping_not_start_or_end_calibration_lines], [
+        self.assertEqual([day01_puzzle02.get_calibration_value_from_line(line) for line in self.overlapping_not_start_or_end_calibration_lines], [
             1,
             18,
             21,
